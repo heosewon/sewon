@@ -1,3 +1,4 @@
+/*
 프로시저의 최대 단점 최대 장점
 
 프로시저가 좋은점 실행계획을 미리 만들어두고 재사용한다. 최대 장점
@@ -24,3 +25,4 @@
 PROCEDURE -> WITH RECOMPlLIER
 OR
 Query ->OPTION (RECOMPILE)
+*/
