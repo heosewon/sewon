@@ -15,7 +15,7 @@ CREATE   PROCEDURE [dbo].[spQuestRequestReset]
     @AccountUniqueID       INT,
     @HeroUniqueID          BIGINT,
     @CurrencyID            INT,           -- 소모할 재화ID
-    @JsonQuest             VARCHAR(8000), -- 갱신할 때 이전이랑 같으면 비워져서 옴.
+    @JsonQuest             VARCHAR(8000), -- 갱신할 때 이전이랑 같으면 비워져서 옴. '[{"qi" : 11234, "is" : 1}, {"qi" : 112345 "is" : 0}]'  is 1 : 새로 들어갈 퀘스트, 0 : 삭제 될 퀘스트
     @PrevGold              BIGINT,        -- 서버가 알고 있는 값.
     @Gold                  BIGINT,        -- 차감 값.
     @PrevFreeDia           INT,           -- 서버가 알고 있는 값.
