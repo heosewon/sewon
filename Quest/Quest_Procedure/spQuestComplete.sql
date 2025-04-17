@@ -3,15 +3,15 @@
 */
 CREATE PROCEDURE [dbo].[spQuestComplete]
     @Result          INT OUTPUT,
-    @IsAccountShared BIT,
+    @IsAccountShared BIT,            -- 0 : 계정 공유 X , 1: 계정 공유
     @AccountUniqueID INT,
     @HeroUniqueID    BIGINT,
     @QuestType       TINYINT,
-    @JsonQuest       VARCHAR (8000),
-    @Gold            BIGINT,        -- 획득 값
-    @Exp             BIGINT,        -- 획득 경험치
+    @JsonQuest       VARCHAR (8000), -- '[{"iqi" : 10000, "qi" : 10001}]'     iqi : 최초 퀘스트, qi : 완료 퀘스트
+    @Gold            BIGINT,         -- 획득 값
+    @Exp             BIGINT,         -- 획득 경험치
     @Position        INT,
-    @JsonItem        VARCHAR (MAX)   -- 획득 아이템
+    @JsonItem        VARCHAR (MAX)   -- 획득 아이템'[{"uid" : 11234, "tid" : 10002 , "sc" : 10,  "flag" : 1,  "psc" : 0]'
 AS
     SET NOCOUNT, XACT_ABORT ON;
     SET @Result = -1;
