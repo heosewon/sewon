@@ -1,0 +1,7 @@
+* 숙지해도 기재는 하자.
+
+기능	                  명령어
+Local Security Policy	| secpol.msc
+Group Policy Editor	  | gpedit.msc
+컴퓨터 관리 콘솔	      | compmgmt.msc
+사용자 및 그룹 관리	  | lusrmgr.msc
