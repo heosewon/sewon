@@ -2,6 +2,10 @@
 
 기능	                  명령어
 Local Security Policy	| secpol.msc
+  Lock Pages in memory properties
+  Perform volume maintenance tasks
 Group Policy Editor	  | gpedit.msc
 컴퓨터 관리 콘솔	      | compmgmt.msc
 사용자 및 그룹 관리	  | lusrmgr.msc
+
+
