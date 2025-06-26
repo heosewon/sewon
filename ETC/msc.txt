@@ -8,4 +8,14 @@ Group Policy Editor	  | gpedit.msc
 컴퓨터 관리 콘솔	      | compmgmt.msc
 사용자 및 그룹 관리	  | lusrmgr.msc
 
+-------------------------------------------------------------------------------------------
 
+log_reuse_wait_desc
+  트랜잭션 로그가 재사용되지 못하고 있는 이유(=왜 로그 공간을 못 비우는지)**를 설명해주는 시스템
+    대표 값 설명은 찾아보면 나옴.
+delayed_durability_desc
+  지연 지속성(Delayed Durability) 이 어떻게 설정되어 있는지
+    DISABLED	지연 지속성 사용 안 함 (기본값)
+    ALLOWED	  프로시저나 트랜잭션 단위에서 DELAYED_DURABILITY = ON 허용
+                ALLOWED 이거 활성화 되어야 'COMMIT WITH ( DELAYED_DURABILITY =  ON );' 사용가능.
+    FORCED	  데이터베이스 내 모든 트랜잭션에 대해 무조건 지연 지속성 적용
