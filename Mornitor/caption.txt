@@ -64,3 +64,27 @@ Batch Requests/sec	클라이언트가 보낸 배치 수 (초당) — 전체 트�
 SQL Compilations/sec	새 쿼리 계획을 컴파일한 횟수 (초당)
 SQL Re-Compilations/sec	기존 계획이 무효화돼 재컴파일된 횟수 (초당)
 
+
+% Processor Time = 시피유 사용량
+	
+	% Idle Time
+		디스크의 사용량. 시피유 처럼.
+	
+		Avg. Disk Queue Length
+			디스크가 뭔가 처리하는동안 대기 하고 있는 작업량의 평균
+			
+			10 이상 올라가면 부하가 있다.
+			
+		Disk Bytes/sec
+			내가 사용하고 있는 디스크 속도에 얼마나.. 되는지.
+			
+		Disk Transfers/sec
+			디스크 작업량
+
+	Network Interface - Bytes Total/sec
+		네트워크 사용량
+
+	Buffer cache hit ratio
+		메모리 히트율
+			90% 이상 유지
+			내려간다면 메모리 증설 필요
