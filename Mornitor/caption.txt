@@ -1,0 +1,66 @@
+🧠 1. Network Interface
+Bytes Total/sec: 초당 전송 및 수신된 네트워크 총 바이트 수
+
+예: 8,998.518 바이트/sec → 약 8.8KB/s 네트워크 트래픽
+
+💽 2. PhysicalDisk
+모든 디스크의 합산 값 (_Total) 기준
+
+항목	설명
+Avg. Disk Bytes/Read	한 번 읽기 작업당 평균 바이트 수
+Avg. Disk Bytes/Transfer	읽기 + 쓰기 평균 바이트 (I/O 당)
+Avg. Disk Bytes/Write	한 번 쓰기 작업당 평균 바이트 수
+Avg. Disk Queue Length	I/O 요청 큐에 대기 중인 평균 요청 수
+Avg. Disk sec/Read	읽기 작업 하나에 걸리는 평균 시간 (초)
+Avg. Disk sec/Transfer	읽기+쓰기 포함 I/O당 평균 시간
+Avg. Disk sec/Write	쓰기 작업 하나에 걸리는 평균 시간 (초)
+
+🧮 3. Processor
+% Processor Time: CPU 사용률. 100%면 한 코어가 계속 사용 중이라는 의미.
+
+🧾 4. SQLServer:Access Methods
+항목	설명
+Full Scans/sec	테이블 풀스캔 횟수 (초당) — 성능 저하 신호일 수 있음
+Index Searches/sec	인덱스를 통한 검색 횟수 (초당) — 많을수록 효율적인 쿼리 수행 중
+
+📚 5. SQLServer:Buffer Manager
+항목	설명
+Buffer cache hit ratio	캐시 적중률(%) — 100에 가까울수록 좋음
+Checkpoint pages/sec	체크포인트로 인해 디스크에 기록된 페이지 수 (초당)
+Lazy writes/sec	백그라운드에서 디스크로 쓴 페이지 수 (초당)
+Page life expectancy	페이지가 버퍼풀에 머무는 평균 시간 (초) — 낮으면 메모리 압박 징후
+
+🗃 6. SQLServer:Databases
+항목	설명
+Log Bytes Flushed/sec	로그 버퍼에서 디스크로 기록된 바이트 수 (초당)
+Log Flush Wait Time	로그 플러시 작업 대기 시간 (ms)
+Log Flushes/sec	로그가 플러시된 횟수 (초당)
+Transactions/sec	커밋된 트랜잭션 수 (초당)
+
+⚙️ 7. SQLServer:General Statistics
+Processes blocked: 블로킹 중인 세션 수
+
+🔒 8. SQLServer:Locks
+Average Wait Time (ms): 락 대기 평균 시간 (밀리초)
+
+🧠 9. SQLServer:Memory Manager
+항목	설명
+Target Server Memory (KB)	SQL Server가 사용하려고 하는 메모리
+Total Server Memory (KB)	현재 실제 사용 중인 메모리
+
+📈 10. SQLServer:Plan Cache
+Cache Hit Ratio: 쿼리 실행 계획이 캐시에 있을 확률 — 높을수록 좋음
+
+📊 11. SQLServer:Query Store
+항목	설명
+Query Store CPU usage	초당 쿼리 CPU 사용량
+Query Store logical reads	초당 논리적 읽기 수 (메모리에서 읽기)
+Query Store logical writes	초당 논리적 쓰기 수
+Query Store physical reads	초당 디스크에서 실제로 읽은 횟수
+
+🧮 12. SQLServer:SQL Statistics
+항목	설명
+Batch Requests/sec	클라이언트가 보낸 배치 수 (초당) — 전체 트래픽 지표
+SQL Compilations/sec	새 쿼리 계획을 컴파일한 횟수 (초당)
+SQL Re-Compilations/sec	기존 계획이 무효화돼 재컴파일된 횟수 (초당)
+
