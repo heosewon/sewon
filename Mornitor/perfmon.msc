@@ -1,5 +1,3 @@
-*.msc binary
-
 <?xml version="1.0"?><MMC_ConsoleFile ConsoleVersion="3.0" ProgramMode="Author">
   <ConsoleFileID>{26BD890F-F7C4-4676-BF49-99E4ED7D210A}</ConsoleFileID>
   <FrameState ShowStatusBar="true">
