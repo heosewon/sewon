@@ -25,4 +25,21 @@
 PROCEDURE -> WITH RECOMPlLIER
 OR
 Query ->OPTION (RECOMPILE)
+
+
+2022에 추가 Parameter Sensitivity Plan (PSP)
+데이터 분포가 다른 파라미터 값으로 인해 실행 계획이 잘못 선택되는 문제
+즉, Parameter Sniffing 현상을 자동으로 해결해주는 기능입니다.
+옵티마이저는 조건절 내 파라미터 중 히스토그램 기반 통계를 가진 주요 파라미터 1개를 선택하고
+해당 파라미터의 예상 행 수(카디널리티)를 기준으로 Small / Medium / Large의 세 구간으로 나누어
+최대 세 가지 실행 계획을 생성
+이를 통해 계획 캐시의 안정성이 높아지고 파라미터 기반 프로시저 호출 시에도
+보다 일관된 성능을 유지할 수 있게 
+다만 2022 PSP는 SELECT 또는 SELECT를 포함한 저장 프로시저에만 적용되어
+DELETE, UPDATE, INSERT, MERGE와 같은 DML에는 동작하지 않는 점이 아쉬움
+그러나 SQL Server 2025에서는 PSP가 모든 DML로 확장 적용되었으며
+조건절이 복잡하거나 복수의 조건이 존재하는 경우에도
+옵티마이저가 왜곡 가능성이 높은 조건절을 포함하여 보다 정교하게 주요 파라미터를 선정하고
+이를 기준으로 PSP 실행 계획을 생성하도록 개선
 */
+
